@@ -1,0 +1,36 @@
+pedidos = []
+qdp = 0
+soma = 0
+while True:
+    nome = str(input("Olá, Seja muito bem vindo a pittisarria Colliseu! Como vai sua noite? "))
+    pittisa = str(input("Qual será o tamanho da sua pittisa? (P, M, G: "))
+    if pittisa == "P":
+       soma+=20
+    if pittisa == "M":
+       soma +=30
+    if pittisa == "G":
+        soma += 40
+    ingredientesextras = ["calabresa","mussarela","tomate","cebola","bacon"]
+    
+    extra = input("O senhor(a) deseja adicionar um ingrediente extra? temos: (calabresa, mussarela, tomate, cebola, bacon)? (sim/não): ")
+    if  extra == 'sim':
+        ingrediente = int(input("Quantos ingredientes extras o(a) senhor(a) deseja adicionar?: "))
+        soma += ingrediente * 5
+    refrisin = input("Deseja um refrisin para acompanhar sua pittisa? (sim/não): ")
+    if refrisin == 'sim':re
+    soma += 12
+    
+    pedidos.append(soma)
+    qdp += 1
+    print(f"Valor do seu pedido deu: R${soma:.2f}")
+
+    continuar = input("o(a) senhor(a) deseja fazer outro pedido? (sim/não): ")
+    if continuar != 'sim':
+        break
+
+if pedidos:
+    print(f"Pedido valor mas alto: R${max(pedidos):.2f}")
+    print(f"Pedido de valor mas baixo: R${min(pedidos):.2f}")
+    print(f"Quantidade total de pedidos realizados: {qdp}")
+else:
+    print("Nenhum pedido foi realizado ainda, seu vendedor ruim.")
